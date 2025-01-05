@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podo-mysql-cli-1
+  namespace: ppoc-lpenac
+spec:
+  serviceAccount: sacc-with-anyuid
+  serviceAccountName: sacc-with-anyuid
+  containers:
+    - name: cntr-main
+      image: lucianoepc/mysql-cli:1.0-x64-alp3.20
+      command: ["tail"]
+      args: ["-f", "/dev/null"]
+      imagePullPolicy: Always
+      securityContext:
+        allowPrivilegeEscalation: true
+        runAsNonRoot: false
+        runAsUser: 1000
+        runAsGroup: 1000

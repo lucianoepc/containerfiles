@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podo-oracle-cli-2
+  namespace: ppoc-lpenac
+spec:
+  serviceAccount: sacc-with-anyuid
+  serviceAccountName: sacc-with-anyuid
+  containers:
+    - name: cntr-main
+      image: lucianoepc/oracle-cli:1.0-x64-ubi8.9
+      command: ["tail"]
+      args: ["-f", "/dev/null"]
+      imagePullPolicy: Always
+      securityContext:
+        allowPrivilegeEscalation: true
+        runAsNonRoot: false
+        runAsUser: 1000
+        runAsGroup: 1000

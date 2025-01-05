@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podo-nginx-01
+  namespace: ppoc-temp
+spec:
+  containers:
+  - name: ctnr-main
+    image: nginx:latest
+    securityContext:
+      privileged: true
