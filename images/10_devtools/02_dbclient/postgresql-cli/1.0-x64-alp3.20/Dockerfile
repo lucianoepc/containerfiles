@@ -4,8 +4,8 @@
 #  podman image prune 
 #
 #Ejemplo del comando de creación/compilación de la imagen:
-#  cd /home/lucianoepc/code/own1/files/imagebuilding
-#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/postgresql-cli:1.0-x64-alp3.20 ./containerfiles/10_devtools/02_dbclient/postgresql-cli/1.0-x64-alp3.20/
+#  cd ~/code/own1/files/containerfiles
+#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/postgresql-cli:1.0-x64-alp3.20 ./images/10_devtools/02_dbclient/postgresql-cli/1.0-x64-alp3.20/
 #  podman run -it --rm --name test01 lucianoepc/postgresql:1.0-x64-alp3.20
 #  psql --version
 #

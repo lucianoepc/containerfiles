@@ -4,8 +4,8 @@
 #  podman image prune 
 #
 #Ejemplo del comando de creación/compilación de la imagen:
-#  cd /home/lucianoepc/code/own1/files/imagebuilding
-#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/oracle-cli:1.0-x64-ubi9.4 ./containerfiles/10_devtools/02_dbclient/oracle-cli/1.0-x64-ubi9.4/
+#  cd ~/code/own1/files/containerfiles
+#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/oracle-cli:1.0-x64-ubi9.4 ./images/10_devtools/02_dbclient/oracle-cli/1.0-x64-ubi9.4/
 #  podman run -it --rm --name test01 lucianoepc/oracle-cli:1.0-x64-ubi9.4
 #  $ sqlplus -V
 

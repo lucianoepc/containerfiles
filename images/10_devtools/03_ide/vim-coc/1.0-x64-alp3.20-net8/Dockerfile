@@ -4,8 +4,8 @@
 #  podman image prune 
 #
 #Ejemplo del comando de creación/compilación de la imagen:
-#  cd /home/lucianoepc/code/own1/files/imagebuilding
-#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/vim-coc:1.0-x64-alp3.20-net8 ./containerfiles/10_devtools/03_ide/vim-coc/1.0-x64-alp3.20-net8/
+#  cd ~/code/own1/files/containerfiles
+#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/vim-coc:1.0-x64-alp3.20-net8 ./images/10_devtools/03_ide/vim-coc/1.0-x64-alp3.20-net8/
 #  podman run -it --rm --name test01 lucianoepc/vim-coc:1.0-x64-alp3.20-net8
 #
 

@@ -4,8 +4,8 @@
 #  podman image prune 
 #
 #Ejemplo del comando de creación/compilación de la imagen:
-#  cd /home/lucianoepc/code/own1/files/imagebuilding
-#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/networking-basic:1.0-x64-alp3.20 ./containerfiles/10_devtools/01_networking/networking-basic/1.0-x64-alp3.20/
+#  cd ~/code/own1/files/containerfiles
+#  podman build --build-arg UID=1000 --build-arg GID=1000 -t lucianoepc/networking-basic:1.0-x64-alp3.20 ./images/10_devtools/01_networking/networking-basic/1.0-x64-alp3.20/
 #  podman run -it --rm --name test01 lucianoepc/networking-basic:1.0-x64-alp3.20
 #
 
@@ -69,7 +69,7 @@ ARG HOME_PATH=/home/appuser
 
 #3. Crear el usuario/grupo para desarrollo e instalar git/sudo y remplazando los comandos de networking tools predeterminados de BusyBox.
 RUN apk --no-cache add bash sudo curl openssh-client wget openssl fzf vim \
-    bind-tools dhclient net-tools net-tools bridge-utils ifupdown-ng iputils iproute2-minimal netcat-openbsd traceroute \
+    bind-tools net-tools net-tools bridge-utils ifupdown-ng iputils iproute2-minimal netcat-openbsd traceroute \
     iptables ip6tables iproute2 tcpdump dhcping busybox-extras \
     && addgroup -g $GID ${USER_NAME} \
     && adduser -D -u $UID -G ${USER_NAME} -h ${HOME_PATH} -s /bin/bash ${USER_NAME} \
